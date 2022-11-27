@@ -1,0 +1,302 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "successfullyAddedProject",
+                "type": "string"
+            }
+        ],
+        "name": "ReturnMessage",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_projectName",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_publisher",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_uri",
+                "type": "string"
+            }
+        ],
+        "name": "addProject",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_voter",
+                "type": "address"
+            }
+        ],
+        "name": "downVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getDownVotes",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "_downVotes",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getUpVotes",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "_upVotes",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            }
+        ],
+        "name": "noOfVotes",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            }
+        ],
+        "name": "projectDetail",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "uniqueId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "projectName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "publisher",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "upVotes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "downVotes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "uri",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct Reef_Governance.Projects",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "projects",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "uniqueId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "projectName",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "publisher",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "upVotes",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "downVotes",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "uri",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_voter",
+                "type": "address"
+            }
+        ],
+        "name": "removeProjects",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_uniqueId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_voter",
+                "type": "address"
+            }
+        ],
+        "name": "upVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_voter",
+                "type": "address"
+            }
+        ],
+        "name": "verifyVoter",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "viewAllProjects",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "uniqueId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "projectName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "publisher",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "upVotes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "downVotes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "uri",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct Reef_Governance.Projects[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

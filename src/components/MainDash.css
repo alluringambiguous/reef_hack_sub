@@ -1,0 +1,5 @@
+.mainDashContainer{
+    flex-direction: column;
+    display: flex;
+    margin: 36px;
+}
