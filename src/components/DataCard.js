@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Uik from '@reef-defi/ui-kit'
 import "./DataCard.css"
 
 
@@ -20,7 +21,7 @@ function DataCard({ Title, Data, TopContractAddress, Progress, Circle, Link }) {
     }
 
     return (
-        <div className="dataCardContainer">
+        <div condensed className="dataCardContainer">
             <div className="titleContainer">{title}</div>
 
             {data ? (

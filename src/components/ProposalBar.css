@@ -29,7 +29,7 @@
 .titleProposalTopContainer {
     display: flex;
     align-items: center;
-    color: #e5007a;
+    color: #A93185;
     font-size: 16px;
     font-weight: 600;
     margin-right: 36px;
@@ -83,8 +83,10 @@
     margin-left: 8px;
 }
 .addProposalContainer {
-    min-width: 216px;
-    background-color: #e5007a;
+    min-width: 160px;
+    color: white;
+    background-color: #A93185;
+
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -132,5 +134,5 @@
 }
 .titleProposalTopUnselectedContainer :hover {
     font-weight: 600;
-    color: #e5007a;
+    color: #A93185;
 }

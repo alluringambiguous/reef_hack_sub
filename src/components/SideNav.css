@@ -7,7 +7,7 @@
     width: 17%;
 }
 .logoContainer {
-    color: #e5007a;
+    color: white;
     margin-top: 33px;
     font-size: 28px;
     height: 15%;
@@ -21,7 +21,7 @@
 }
 .optionContainer {
     color: white;
-    background-color: #e5007a;
+    /* background:linear-gradient(#A93185,#5D3BAD); */
     padding: 5px;
     display: flex;
     justify-content: center;

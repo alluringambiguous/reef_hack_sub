@@ -67,14 +67,14 @@
     margin-right: 4px;
 }
 .reactionContainer:hover{
-    color:#e5007a;
+    color:#A93185;
 }
 .trashContainer{
-    color: #d3d3d3;
+    color: #A93185;
 }
 
 .trashContainer :hover{  
-    color:#e5007a;
+    color:#A93185;
 }
 .proposalReactionContainer{
     display: flex;

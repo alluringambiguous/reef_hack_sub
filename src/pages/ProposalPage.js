@@ -4,7 +4,7 @@ import React from 'react'
 
 function ProposalPage( {usradr ,setUsrAdr,projectUrl,setProjectUrl}) {
   return (
-    <div className='dashboardContainer'><SideNav/><Proposal projectUrl = {projectUrl} setPojectUrl ={setProjectUrl} usradr={usradr} setUsrAdr={setUsrAdr}/></div>
+    <div className='dashboardContainer'><SideNav className="sideNavTopContainer"/><Proposal className="mainDashTopContainer"  projectUrl = {projectUrl} setPojectUrl ={setProjectUrl} usradr={usradr} setUsrAdr={setUsrAdr}/></div>
   )
 }
 

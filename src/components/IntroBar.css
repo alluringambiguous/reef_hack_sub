@@ -46,7 +46,7 @@
     height: 48px;
     width: 48px;
     border-radius: 24px;
-    background-color: #e5007a;
+    background-color: #A93185;
 }
 .connectButtonContainer {
     display: flex;
@@ -62,7 +62,7 @@
     height: 48px;
     border-radius: 10px;
     width: 60%;
-    background-color: #e5007a;
+    background-color: #A93185;
     color: white;
     border-width: 0px;
     font-weight: 600;
@@ -80,7 +80,7 @@
     box-sizing: border-box;
     padding: 16px;
     width: 60%;
-    color: #e5007a;
+    color: #A93185;
     /* border-color: #e5007a; */
     /* border-width: 2px;
     border-style: solid; */
