@@ -2,7 +2,7 @@
 Reef Governance Platform
 
 # Video:
-(https://github.com/alluringambiguous/reef_hack_sub/raw/master/reef.mp4)
+![demo video](https://github.com/alluringambiguous/reef_hack_sub/raw/master/reef.mp4)
 
 
 # Updated:
