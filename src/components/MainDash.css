@@ -4,3 +4,11 @@
     margin: 36px;
     width:100%;
 }
+.spinnerMainContainer{
+    width:100%;
+    background-color: aqua;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}

@@ -2,15 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    /* background: linear-gradient(#a93185, #5d3bad ); */
+    background:#1e1e28;
     justify-content: space-between;
     width: 17%;
+    margin:0px;
 }
 .logoContainer {
     color: white;
     margin-top: 33px;
     font-size: 28px;
     height: 15%;
+    font-weight: 550 !important;
+    letter-spacing: 3% !important;
 }
 .sideOptionsContainer {
     display: flex;
@@ -20,7 +24,7 @@
     width: 80%;
 }
 .optionContainer {
-    color: white;
+    color: black !important;
     /* background:linear-gradient(#A93185,#5D3BAD); */
     padding: 5px;
     display: flex;
@@ -31,11 +35,12 @@
     height: 36px;
     font-weight: 600;
     margin-bottom: 24px;
+    background-color: white !important;
 }
 .optionUnselectedContainer{
     /* background-color: #1e1e28; */
-    background-color: white;
-    color: #1e1e28;
+    background-color: none !important;
+    color: white;
     padding: 5px;
     display: flex;
     justify-content: center;

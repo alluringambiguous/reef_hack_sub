@@ -396,6 +396,7 @@ function Proposal({ usradr, setUsrAdr, projectUrl, setProjectUrl }) {
                                 whiteSpace: "pre-wrap",
                                 backgroundColor: "white",
                                 color: "black",
+                                padding: "8px",
                             }}
                             className="proposalContent"
                         />

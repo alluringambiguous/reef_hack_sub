@@ -1,8 +1,11 @@
 .modalHeadMessage1 {
     font-size: 48px;
-    color: #A93185;
+    /* color: #a93185; */
     font-weight: 600;
     margin-bottom: 48px;
+    background: linear-gradient(to right, #a93185 , #5d3bad);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 .modalHeadMessage2 {
     font-size: 16px;
@@ -16,12 +19,18 @@
     margin: 0px;
     color: #1e1e28;
 }
+.inputContainer{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    max-width: 82%;
+}
 .proposerAddressContainer {
     display: flex;
-    width: 50%;
+    width: 70%;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: black;
+    font-weight: 600;
 }
 .modalStyleContainer {
     width: 80%;
@@ -50,6 +59,8 @@
     padding-top: 48px;
     padding-left: 256px;
     box-sizing: border-box;
+    background-color: white;
+    /* background: linear-gradient(#a93185, #5d3bad ); */
 }
 .editorContainer {
     width: 82.1%;
@@ -62,14 +73,16 @@
     height: 48px;
     border-radius: 10px;
     width: 30%;
-    background-color: #A93185;
+    background-color: #a93185;
     color: white;
     margin-top: 16px;
     margin-left: 52.1%;
+    min-width:160px;
 }
 
+
 .buttonModalContainer:hover {
-    background-color: #A93185;
+    background-color: #a93185;
     color: #1e1e28;
     cursor: pointer;
     /* SET COLOR IN BLACK */

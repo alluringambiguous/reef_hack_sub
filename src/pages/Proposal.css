@@ -14,7 +14,9 @@
 .headingProposalPageContainer{
     font-size: 24px;
     margin-right: 24px;
-    color: #e5007a;
+    background: linear-gradient(to right, #a93185 , #5d3bad);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 .proposalContainer {
     padding: 24px;
@@ -77,7 +79,8 @@
     justify-content: space-between;
     color: black;
     width: 8%;
-    margin-left: 24px;
+    margin-left: auto;
+    margin-top: 16px;
 }
 
 .proposalUpVotes{

@@ -5,6 +5,8 @@
 	width: clamp(300px, 75%, 800px) !important;
 	margin-inline: auto;
 	text-align: center;
+    /* font-family: 'Qwitcher Grypen', cursive; */
+
 }
 
 .container {

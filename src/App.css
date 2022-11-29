@@ -5,7 +5,9 @@
     overflow: hidden;
     justify-content: space-between;
     
-    
+    /* font-family: 'Qwitcher Grypen', cursive; */
+    font-family:Arial, Helvetica, sans-serif;
+    /* font: 30; */
     /* background: linear-gradient(113.5% 113.5% at 56.15% -32.22%, rgba(229, 0, 122, 0.3) 0%, rgba(243, 137, 193, 0.138844) 70.82%, rgba(255, 255, 255, 0) 100%) warning: gradient uses a rotation that is not supported by CSS and may not behave as expected, #FFFFFF; */
 
 }

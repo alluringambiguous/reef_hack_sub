@@ -9,9 +9,10 @@ import { faGithub, faFacebook,faTwitter,faDiscord } from "@fortawesome/free-bran
 function SideNav() {
     return (
         <div className="sideNavContainer">
+            {/* <div className="logoContainer">Governance</div> */}
             <div className="logoContainer">Governance</div>
             <div className="sideOptionsContainer">
-                <Uik.Button fill className="optionContainer">Dashboard</Uik.Button>
+                <Uik.Button  className="optionContainer">Dashboard</Uik.Button>
                 <div className="optionUnselectedContainer">My Proposal</div>
                 <div className="optionUnselectedContainer">Settings</div>
 

@@ -86,27 +86,34 @@ function DataBar() {
             [
                 <DataCard
                     key={1}
-                    Title={"This Weeks Top Proposal"}
+                    Title={"This Weeks Top Project"}
                     Data={topN}
                     TopContractAddress={topA}
                 />,
                 <DataCard
                     key={2}
-                    Title={"GLMR Price"}
-                    Data={`$ ${Math.round(glmrToUsd / 40833 * 10000) / 10000}`}
+                    Title={"REEF Price"}
+                    // Data={`$ ${Math.round(glmrToUsd / 40833 * 10000) / 10000}`}
+                  Data={0.0029 }
                     TopContractAddress={"http://glmrtousdconverter"}
                 />,
+                // <DataCard
+                //     key={3}
+                //     Title={"Push for Governance in"}
+                //     Data={`${dayLeft} days to go`}
+                    
+                //     Progress={dayLeft}
+                // />,
+                // <DataCard
+                //     key={4}
+                //     Title={"Last Weeks Top Proposal"}
+                //     Data={"NaN"}
+                //     TopContractAddress={"0xurietyoreitweoriutw"}
+                // />,
                 <DataCard
                     key={3}
-                    Title={"Push for Governance in"}
-                    Data={`${dayLeft} days to go`}
-                    
-                    Progress={dayLeft}
-                />,
-                <DataCard
-                    key={4}
-                    Title={"Last Weeks Top Proposal"}
-                    Data={"NaN"}
+                    Title={"Number of Projects"}
+                    Data={"4"}
                     TopContractAddress={"0xurietyoreitweoriutw"}
                 />,
             ],

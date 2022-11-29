@@ -19,7 +19,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import ModalTab from './Modal'
 
-function ProposalBar({ userAddr, setOpenAlert, setUserAddr, projectUrl, setProjectUrl}) {
+function ProposalBar({ userAddr, setOpenAlert, setUserAddr, projectUrl, setProjectUrl, setIsLoading}) {
     const [proposals, setProposals] = useState([])
     const [open, setOpen] = React.useState(false)
     const [sortLatestFirst, setSortLatestFirst] = useState(true)
@@ -122,7 +122,8 @@ function ProposalBar({ userAddr, setOpenAlert, setUserAddr, projectUrl, setProje
         let result = []
         try {
             console.log( GreeterContract.address,GreeterContract.abi,signer)
-           result = await factoryContract.viewAllProjects()
+            result = await factoryContract.viewAllProjects()
+            // setIsLoading("ALL PROJECTS LOADED")
         } catch (err) {
             // console.log("hello from catch")
             console.log(err)
@@ -194,7 +195,9 @@ function ProposalBar({ userAddr, setOpenAlert, setUserAddr, projectUrl, setProje
                     })
                     .reverse()
             )
+            // setIsLoading("DONE")
         }
+        // setIsLoading("upadateUI called")
         updateUi()
         
     }, [signer,userAddr])

@@ -19,6 +19,10 @@
     font-weight: 600;
     display: flex;
     align-items: center;
+    /* color:#A93185; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Bungee Inline', cursive; */
+
 }
 .descContainer {
     font-weight: 500;
@@ -27,6 +31,10 @@
     margin-top: 8px;
     display: flex;
     align-items: center;
+    /* font-family: 'Poppins', cursive;
+     */
+     /* font-family: 'Bungee Inline', cursive; */
+
 }
 .profileContainer {
     display: flex;
@@ -70,6 +78,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
+        
 }
 .connectedWalletContainer {
     display: flex;

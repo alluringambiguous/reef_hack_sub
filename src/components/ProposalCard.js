@@ -4,10 +4,9 @@ import { Provider, Signer } from "@reef-defi/evm-provider"
 import { WsProvider } from "@polkadot/rpc-provider"
 import { Contract } from "ethers"
 import GreeterContract from "../contracts/Greeter.json"
-import { ApiPromise } from '@polkadot/api';
-import { options } from '@reef-defi/api';
+import { ApiPromise } from "@polkadot/api"
+import { options } from "@reef-defi/api"
 import { Link } from "react-router-dom"
-
 
 import "./ProposalCard.css"
 // import Alert from "@mui/material/Alert"
@@ -21,17 +20,25 @@ import {
 
 import ProfilePicture from "./ProfilePicture"
 
-function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAlert }) {
+function ProposalCard({
+    name,
+    uri,
+    proposer,
+    upvote,
+    downvote,
+    uniqueId,
+    setOpenAlert,
+}) {
     const [like, setLike] = useState(upvote)
     const [dislike, setDislike] = useState(downvote)
     const [signer, setSigner] = useState()
     const [isWalletConnected, setWalletConnected] = useState(false)
-    const [evmAcc, setEvmAcc] = useState();
+    const [evmAcc, setEvmAcc] = useState()
     // const contractAddress = contractAddressData.contractAddress
     // const [userCardAddr,setUserCardAddr] = useState(account)
     // console.log(`thsi is in propsoal card${account}`)
     const URL = "wss://rpc-testnet.reefscan.com/ws"
-   const checkExtension = async () => {
+    const checkExtension = async () => {
         let allInjected = await web3Enable("Reef")
 
         if (allInjected.length === 0) {
@@ -69,7 +76,7 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
                 )
                 await wallet.claimDefaultAccount()
             }
-            console.log("hello form wallet",wallet)
+            console.log("hello form wallet", wallet)
             setSigner(wallet)
             console.log(signer)
         })
@@ -83,20 +90,17 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
         }
         return true
     }
-    const getEvmAddress= async (substractAddr) => {
-
-		const provider = new WsProvider(URL);
-		const api = new ApiPromise(options({ provider }));
-		await api.isReady;
-		console.log("started evm ")
-        const data = await api.query.evmAccounts.evmAddresses(substractAddr);
+    const getEvmAddress = async (substractAddr) => {
+        const provider = new WsProvider(URL)
+        const api = new ApiPromise(options({ provider }))
+        await api.isReady
+        console.log("started evm ")
+        const data = await api.query.evmAccounts.evmAddresses(substractAddr)
         console.log("got the evm addr", data.toHuman())
         setEvmAcc(data.toHuman())
         return data.toHuman()
-		
+    }
 
-	}
-    
     const upVote = async () => {
         // console.log("waiti for check signer in upvote")
         await checkSigner()
@@ -107,23 +111,18 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
             signer
         )
         // console.log("waiting for viewall projects")
-        
+
         try {
             // console.log("just before upVote function api call", GreeterContract.address, GreeterContract.abi, signer)
             const addr = await getEvmAddress(signer._substrateAddress)
             // console.log("the evm complatible address is",addr)
             // const addr = "0x"+signer._substrateAddress
-            await factoryContract.upVote(uniqueId , addr )
+            await factoryContract.upVote(uniqueId, addr)
         } catch (err) {
             // console.log("hello from catch")
             console.log(err)
         }
         // console.log("upvote projects returned")
-
-        
-       
-        
-        
     }
     const downVote = async () => {
         // console.log("waiti for check signer")
@@ -135,21 +134,16 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
             signer
         )
         // console.log("waiting for viewall projects")
-        
+
         try {
             console.log(GreeterContract.address, GreeterContract.abi, signer)
             const addr = await getEvmAddress(signer._substrateAddress)
-           await factoryContract.downVote(uniqueId,addr)
+            await factoryContract.downVote(uniqueId, addr)
         } catch (err) {
             // console.log("hello from catch")
             console.log(err)
         }
         // console.log("downvote projects returned")
-
-        
-       
-        
-        
     }
     const getDownVotes = async () => {
         // console.log("waiti for check signer")
@@ -163,17 +157,14 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
         // console.log("waiting for viewall projects")
         let result = []
         try {
-            console.log( GreeterContract.address,GreeterContract.abi,signer)
-           result = await factoryContract.getDownVotes(uniqueId)
+            console.log(GreeterContract.address, GreeterContract.abi, signer)
+            result = await factoryContract.getDownVotes(uniqueId)
         } catch (err) {
             console.log("hello from catch")
             console.log(err)
         }
         // console.log("downvotes displayed projects returned")
 
-        
-       
-        
         return result
     }
     const getUpVotes = async () => {
@@ -188,21 +179,17 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
         // console.log("waiting for viewall projects")
         let result = []
         try {
-            console.log( GreeterContract.address,GreeterContract.abi,signer)
-           result = await factoryContract.getUpVotes(uniqueId)
+            console.log(GreeterContract.address, GreeterContract.abi, signer)
+            result = await factoryContract.getUpVotes(uniqueId)
         } catch (err) {
             // console.log("hello from catch")
             console.log(err)
         }
         // console.log("downvotes displayed projects returned")
 
-        
-       
-        
         return result
     }
 
-    
     const handleLike = async () => {
         // setOpenAlert(true)
         await upVote({ onSuccess: (tx) => handleSuccess(tx) })
@@ -230,21 +217,20 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
         <div className="proposalCardContainer">
             <div className="porposalCardDataContainer">
                 <div className="proposalCircleContainer">
-                    {proposer ? <ProfilePicture address={proposer} />:<></>}
+                    {proposer ? <ProfilePicture address={proposer} /> : <></>}
                 </div>
                 <div className="proposalAuthorDataContainer">
                     <Link
                         to={`/-${uniqueId}+${uri}`}
                         key="proposalIpfsHash"
-                        style={{ textDecoration: "none"}}
+                        style={{ textDecoration: "none" }}
                         className="proposalTitleContainer"
-                        
                     >
                         {name ? (
                             <div style={{ display: "flex", width: "100%" }}>
                                 {name.slice(0, 18)}
                                 {name.length > 18 ? <>...</> : <div></div>}
-                                
+
                                 {/* {proposer ===
                                 "0xD3Ff96cf6925a905dce544140F06B9745e2bcBae" ? (
                                     <div style={{ marginLeft: "auto" }}>
@@ -264,11 +250,13 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
                             <div></div>
                         )}
                     </Link>
-
-                    <div className="proposalAuthorContainer">
-                        {proposer}
-                        
-                    </div>
+                    {proposer ? (
+                        <div className="proposalAuthorContainer">
+                            {proposer.slice(0,4)}...{proposer.slice(proposer.length-4)}
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
                 </div>
             </div>
             <div className="proposalReactionsContainer">
@@ -290,7 +278,6 @@ function ProposalCard({ name, uri, proposer, upvote, downvote,uniqueId,setOpenAl
                         }}
                         className="reactionContainer"
                     />
-                    
 
                     <div>{dislike}</div>
                 </div>

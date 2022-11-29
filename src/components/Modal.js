@@ -13,18 +13,26 @@ import { WsProvider } from "@polkadot/rpc-provider"
 
 import { Contract } from "ethers"
 import GreeterContract from "../contracts/Greeter.json"
+import Uik from "@reef-defi/ui-kit"
 
-function ModalTab({ userAddr,mainsigner, open, handleClose, setOpenAlert , projectUrl, setProjectUrl} ) {
+function ModalTab({
+    userAddr,
+    mainsigner,
+    open,
+    handleClose,
+    setOpenAlert,
+    projectUrl,
+    setProjectUrl,
+}) {
     const [title, setTitle] = React.useState("")
     const [openSnack, setOpenSnack] = React.useState(false)
-    
+
     const [markDownValue, setMarkDownValue] = React.useState(
         "type proposal here ...."
     )
     const [signer, setSigner] = useState()
     const [isWalletConnected, setWalletConnected] = useState(false)
     const URL = "wss://rpc-testnet.reefscan.com/ws"
-
 
     const checkExtension = async () => {
         let allInjected = await web3Enable("Reef")
@@ -91,8 +99,16 @@ function ModalTab({ userAddr,mainsigner, open, handleClose, setOpenAlert , proje
         // console.log("waiting for viewall projects")
         let result = []
         try {
-            console.log(GreeterContract.address, GreeterContract.abi, mainsigner)
-            result = await factoryContract.addProject(title,userAddr,projectUrl)
+            console.log(
+                GreeterContract.address,
+                GreeterContract.abi,
+                mainsigner
+            )
+            result = await factoryContract.addProject(
+                title,
+                userAddr,
+                projectUrl
+            )
         } catch (err) {
             // console.log("hello from catch")
             console.log(err)
@@ -155,7 +171,10 @@ function ModalTab({ userAddr,mainsigner, open, handleClose, setOpenAlert , proje
 
             console.log("final ipfs url string", `${url_string}`)
             setProjectUrl(url_string)
-            console.log("this is the value assigned to the variable : ",projectUrl)
+            console.log(
+                "this is the value assigned to the variable : ",
+                projectUrl
+            )
         } catch (error) {
             console.log(error)
         }
@@ -182,49 +201,59 @@ function ModalTab({ userAddr,mainsigner, open, handleClose, setOpenAlert , proje
     }
 
     return (
-        <Modal
-            open={open}
-            onClose={handleClose}
-            radius="10px"
-            className="modalContainer"
+        
+            <Modal
+                open={open}
+                onClose={handleClose}
+                radius="10px"
+                className="modalContainer"
         >
-            <div className="modalStyleContainer">
-                <Box
-                    className="boxStyleContainer"
-                    component="form"
-                    noValidate
-                    autoComplete="off"
-                >
-                    <div className="modalHeadMessage1">Have a new idea?</div>
-                    {/* <div className="modalHeadMessage2">Let everyone know </div> */}
-                    <div className="proposerAddressContainer">
-                        <div>Proposer's Address :</div> <div>{userAddr}</div>
-                    </div>
-                    <TextField
-                        id="filled"
-                        label="Proposal's Title"
-                        value={title}
-                        variant="filled"
-                        onChange={handleTitleChange}
-                        sx={{
-                            bgcolor: "white",
-                            marginTop: "16px",
-                            marginBottom: "16px",
-                            width: { sm: 800 },
-                            multilineColor: "secondary",
-                        }}
-                    />
-                    <MDEditor
-                        value={markDownValue}
-                        onChange={setMarkDownValue}
-                        className="editorContainer"
-                    ></MDEditor>
-                    <div className="buttonModalContainer" onClick={handleClick}>
-                        Submit
-                    </div>
-                </Box>
-            </div>
-        </Modal>
+              
+                <div className="modalStyleContainer">
+                    <Uik.Card
+                        className="boxStyleContainer"
+                        component="form"
+                        noValidate
+                        autoComplete="off"
+                    >
+                        <div className="modalHeadMessage1">
+                            Have a new Project idea?
+                        </div>
+                        {/* <div className="modalHeadMessage2">Let everyone know </div> */}
+                        <div className="proposerAddressContainer">
+                            <div>Proposer's Address :</div>{" "}
+                            <div>{userAddr}</div>
+                        </div>
+                        <Uik.Input
+                            id="filled"
+                            label="Proposal's Title"
+                            value={title}
+                            variant="filled"
+                            onChange={handleTitleChange}
+                            // sx={{
+                            //     bgcolor: "white",
+                            //     marginTop: "16px",
+                            //     marginBottom: "16px",
+                            //     width: { sm: 800 },
+                            //     multilineColor: "secondary",
+                            // }}
+                        className="inputContainer"
+                        />
+                        <MDEditor
+                            value={markDownValue}
+                            onChange={setMarkDownValue}
+                            className="editorContainer"
+                        ></MDEditor>
+                        <Uik.Button fill
+                            className="buttonModalContainer"
+                            onClick={handleClick}
+                        >
+                            Submit
+                        </Uik.Button>
+                    </Uik.Card>
+                </div>
+            </Modal>
+        
     )
 }
 
