@@ -1,5 +1,7 @@
 import React from "react"
 import "./SideNav.css"
+import Uik from '@reef-defi/ui-kit'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faFacebook,faTwitter,faDiscord } from "@fortawesome/free-brands-svg-icons"
 
@@ -9,7 +11,7 @@ function SideNav() {
         <div className="sideNavContainer">
             <div className="logoContainer">Governance</div>
             <div className="sideOptionsContainer">
-                <div className="optionContainer">Dashboard</div>
+                <Uik.Button fill className="optionContainer">Dashboard</Uik.Button>
                 <div className="optionUnselectedContainer">My Proposal</div>
                 <div className="optionUnselectedContainer">Settings</div>
 

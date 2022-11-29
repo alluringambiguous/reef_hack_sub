@@ -1,5 +1,16 @@
-.dashboardContainer{
+.dashboardTopContainer{
+    
     display: flex;
    height: 100vh;
    overflow: hidden;
+   width:100%;
+}
+.sideNavTopContainer{
+    height:100vh;
+   
+}
+.mainDashTopContainer{
+    
+    height:100vh;
+
 }

@@ -10,6 +10,8 @@
     padding-top: 20px;
     padding-right:8px;
     box-sizing: border-box;
+    /* margin-right:50px; */
+    margin-left: 0px;
 
     /* margin-top: 20px; */
     justify-content: space-between;
@@ -41,7 +43,7 @@
 
     /* background: linear-gradient(180.12deg, #1E1E28 -4.88%,  #e5007a 35.66%, #FFFFFF 40.59%, #1E1E28 99.9%); */
 
-    background: linear-gradient(180.12deg, #1E1E28 -4.88%, #1E1E28 26.66%, #FFFFFF 49.59%, #E5007A 99.9%);
+    background: linear-gradient(180.12deg, #1E1E28 -4.88%, #1E1E28 26.66%, #A93185 49.59%, #5D3BAD 99.9%);
 
     background-size: auto 300% ;
     
@@ -114,5 +116,6 @@
 
 .dataCardContainer:hover {
     background-position: 0 100%; /* change the direction of the change here */
+   
 }
 

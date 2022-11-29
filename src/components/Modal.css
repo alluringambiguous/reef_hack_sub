@@ -1,6 +1,6 @@
 .modalHeadMessage1 {
     font-size: 48px;
-    color: #e5007a;
+    color: #A93185;
     font-weight: 600;
     margin-bottom: 48px;
 }
@@ -62,14 +62,14 @@
     height: 48px;
     border-radius: 10px;
     width: 30%;
-    background-color: #e5007a;
+    background-color: #A93185;
     color: white;
     margin-top: 16px;
     margin-left: 52.1%;
 }
 
 .buttonModalContainer:hover {
-    background-color: #e5007a;
+    background-color: #A93185;
     color: #1e1e28;
     cursor: pointer;
     /* SET COLOR IN BLACK */

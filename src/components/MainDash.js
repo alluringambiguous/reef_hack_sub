@@ -13,7 +13,7 @@ function MainDash({usradr,setUsrAdr, projectUrl, setProjectUrl}) {
     
 
     return (
-        <Uik.Container className="mainDashContainer">
+        <div className="mainDashContainer">
             {/* <Collapse className="alertMainDash" in={openAlert} Alert>
                 <Alert
                     action={
@@ -39,9 +39,9 @@ function MainDash({usradr,setUsrAdr, projectUrl, setProjectUrl}) {
                 </Alert>
             </Collapse> */}
             <IntroBar userAddr={usradr} setUserAddr={setUsrAdr} mainSigner={mainSigner} setMainSigner={setMainSigner} />
-            <DataBar />
+            <DataBar className="dataBarContainer"/>
             <ProposalBar projectUrl = { projectUrl} setProjectUrl ={ setProjectUrl} userAddr={usradr} setUserAddr={setUsrAdr} mainSigner={mainSigner}  setOpenAlert={setOpenAlert} />
-        </Uik.Container>
+        </div>
     )
 }
 

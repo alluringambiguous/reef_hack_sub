@@ -248,16 +248,16 @@ function ProposalBar({ userAddr, setOpenAlert, setUserAddr, projectUrl, setProje
                     <FontAwesomeIcon icon={faMagnifyingGlass} width={16} />
                 </div>
 
-                <div onClick={handleOpen} className="addProposalContainer">
-                    <div className="addProposalButtonContainer">
+                <Uik.Button  fill right text="Add Proposal"  icon={faPlus} onClick={handleOpen} className="addProposalContainer">
+                    {/* <div className="addProposalButtonContainer">
                         Add Proposal
                     </div>
                     <FontAwesomeIcon
                         icon={faPlus}
                         width={16}
                         className="plusContainer"
-                    />
-                </div>
+                    /> */}
+                </Uik.Button>
             </div>
             <ModalTab
                 userAddr={userAddr}
