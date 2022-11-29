@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "./DataBar.css"
 import DataCard from "./DataCard"
-import Uik from '@reef-defi/ui-kit'
+
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp'
 import { Provider, Signer } from '@reef-defi/evm-provider'
 import { WsProvider } from '@polkadot/rpc-provider'
