@@ -3,7 +3,7 @@ bhai reef phodenge
 
 
 # Updated:
-* Latest Deployment: [Netlify](https://)
+* Latest Deployment: [Netlify](https://6385a65b528963465e4dcc53--beautiful-halva-9d585f.netlify.app/)
 
 
 # How to run locally
